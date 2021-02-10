@@ -1,0 +1,14 @@
+var mydate= new Date();
+var myday= mydate.getDay();
+var weekday=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var hours= mydate.getHours();
+var ampm=hours >= 12 ? 'PM' : 'AM';
+hours=hours%12;
+hours=hours?hours:12;
+var min=mydate.getMinutes();
+min=min<10 ? '0'+min : min;
+var mytime=hours  + ":" + min + ' '+ampm;
+document.write(mytime);
+document.write("<br/>");
+document.write(weekday[myday]);
+document.write("<br/>");
